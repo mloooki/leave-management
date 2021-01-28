@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace leave_management.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : Controller // Here the Controller names is HOME, So we must Have folder named HOME inside (Views Floder).
     {
         private readonly ILogger<HomeController> _logger;
 
@@ -18,12 +18,12 @@ namespace leave_management.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index() //there is a file called Index in Views folder.
+        public IActionResult Index() //there is a file called Index in HOME folder.
         {
             return View();
         }
 
-        public IActionResult Privacy() //there is a file called Privacy in Views folder.
+        public IActionResult Privacy() //there is a file called Privacy in HOME folder.
         {
             return View();
         }

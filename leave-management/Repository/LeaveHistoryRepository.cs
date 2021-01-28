@@ -26,6 +26,11 @@ namespace leave_management.Repository
             _db.LeaveHistories.Remove(entity);
             return Save();
         }
+        public bool isExists(int id)
+        {
+            var exists = _db.LeaveHistories.Any(q => q.Id == id); //lampda 
+            return exists;
+        }
 
         public ICollection<LeaveHistory> FindAll()
         {

@@ -26,6 +26,11 @@ namespace leave_management.Repository
             _db.LeaveAllocations.Remove(entity);
             return Save();
         }
+        public bool isExists(int id)
+        {
+            var exists = _db.LeaveAllocations.Any(q => q.Id == id); //lampda 
+            return exists;
+        }
 
         public ICollection<LeaveAllocation> FindAll()
         {
