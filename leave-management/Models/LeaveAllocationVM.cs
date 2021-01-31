@@ -1,4 +1,4 @@
-﻿
+﻿using leave_management.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
@@ -11,16 +11,40 @@ namespace leave_management.Models
     public class LeaveAllocationVM
     {
         public int Id { get; set; }
-        [Required]
         public int NumberOfDays { get; set; }
         public DateTime DateCreated { get; set; }
+        public int Period { get; set; }
+
         public EmployeeVM Employee { get; set; }
         public string EmployeeId { get; set; }
+
         public LeaveTypeVM LeaveType { get; set; }
         public int LeaveTypeId { get; set; }
+    }
+    public class CreateLeaveAlloactionVM
+    {
+        public int NumberUpdated { get; set; }
+        public List<LeaveTypeVM> leaveTypes { get; set; }
+    }
+    public class EditLeaveAlloactionVM
+    {
+        public int Id { get; set; }
 
-        public IEnumerable<SelectListItem> Employees { get; set; } //list of employees.
-        public IEnumerable<SelectListItem> LeaveTypes { get; set; }
+        public EmployeeVM Employee { get; set; }
+        public string EmployeeId { get; set; }
+
+        public int NumberOfDays { get; set; }
+        public LeaveTypeVM LeaveType { get; set; }
 
     }
+
+
+    public class ViewAllocationVM
+    {
+        public EmployeeVM Employee { get; set; }
+        public List<LeaveAllocationVM> LeaveAllocations { get; set; }
+    }
+
 }
+
+
