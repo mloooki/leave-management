@@ -4,13 +4,13 @@
 
 
 <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-3 ">
         <div class="info-box text-center">
             <span class="info-box-icon bg-info"><i class="fas fa-tachometer-alt"></i></span>
 
             <div class="info-box-content">
-                <h1 class="card-title">@Model.TotoalRequsets</h1>
-                <h5 class="card-text">@Html.DisplayNameFor(model => model.TotoalRequsets)</h5>
+                <span class="info-box-text">@Model.TotoalRequsets</span>
+                <span class="info-box-number">@Html.DisplayNameFor(model => model.TotoalRequsets)</span>
             </div>
             <!-- /.info-box-content -->
         </div>
@@ -21,8 +21,8 @@
             <span class="info-box-icon bg-warning"><i class="fas fa-exclamation-circle"></i></span>
 
             <div class="info-box-content">
-                <h1 class="card-title text-warning">@Model.PendingRequsets</h1>
-                <h5 class="card-text">@Html.DisplayNameFor(model => model.PendingRequsets)</h5>
+                <span class="info-box-text">@Model.PendingRequsets</span>
+                <span class="info-box-number">@Html.DisplayNameFor(model => model.PendingRequsets)</span>
             </div>
             <!-- /.info-box-content -->
         </div>
@@ -33,8 +33,8 @@
             <span class="info-box-icon bg-success"><i class="far fa-check-circle"></i></span>
              
             <div class="info-box-content">
-                <h1 class="card-title text-success">@Model.ApprovedRequsets</h1>
-                <h5 class="card-text">@Html.DisplayNameFor(model => model.ApprovedRequsets)</h5>
+                <span class="info-box-text">@Model.ApprovedRequsets</span>
+                <span class="info-box-number">@Html.DisplayNameFor(model => model.ApprovedRequsets)</span>
             </div>
             <!-- /.info-box-content -->
         </div>
@@ -45,8 +45,8 @@
             <span class="info-box-icon bg-danger"><i class="far fa-times-circle"></i></span>
 
             <div class="info-box-content">
-                <h1 class="card-title text-danger">@Model.RejectedRequsets</h1>
-                <h5 class="card-text">@Html.DisplayNameFor(model => model.RejectedRequsets)</h5>
+                <span class="info-box-text">@Model.RejectedRequsets</span>
+                <span class="info-box-number">@Html.DisplayNameFor(model => model.RejectedRequsets)</span>
             </div>
             <!-- /.info-box-content -->
         </div>

@@ -1,4 +1,5 @@
 ﻿using leave_management.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace leave_management.Controllers
 {
+    [Authorize]
     public class HomeController : Controller // Here the Controller names is HOME, So we must Have folder named HOME inside (Views Floder).
     {
         private readonly ILogger<HomeController> _logger;
